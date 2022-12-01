@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./Componentes/Banner/Banner";
+import Galeria from "./Componentes/Galeria/Galeria";
+import Menu from "./Componentes/Menu/Menu";
+import Rodape from "./Componentes/Rodape/Rodape";
+import GlobalStyled from "./GlobalStyled";
+import PaginaInicial from "./pages/PaginaIncial";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyled />
+      <PaginaInicial />
+      <div style={{ display: "flex" }}>
+        <Menu />
+        <div>
+          <Banner />
+          <Galeria />
+        </div>
+      </div>
+
+      <Rodape />
     </div>
   );
 }
